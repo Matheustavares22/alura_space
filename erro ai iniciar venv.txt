@@ -1,0 +1,13 @@
+Para resolver esse problema, você precisa alterar temporariamente a política de execução do PowerShell para permitir a execução de scripts. Você pode fazer isso abrindo o PowerShell como administrador e executando o seguinte comando:
+
+plaintext
+Copy code
+Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
+Após executar esse comando, tente ativar o ambiente virtual novamente usando o comando venv/Scripts/activate. Deverá funcionar sem o erro de segurança.
+
+No entanto, é importante lembrar que alterar a política de execução para "Bypass" pode representar um risco de segurança, pois permite a execução de qualquer script sem restrições. Portanto, após concluir o trabalho com o ambiente virtual, é recomendável reverter a política de execução para sua configuração original. Para isso, execute o seguinte comando no PowerShell:
+
+plaintext
+Copy code
+Set-ExecutionPolicy -ExecutionPolicy Restricted -Scope Process
+Isso ajudará a manter a segurança do seu sistema.
