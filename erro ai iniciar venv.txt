@@ -1,3 +1,9 @@
+virtualenv venv
+Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
+venv/Scripts/Activate
+Set-ExecutionPolicy -ExecutionPolicy Restricted -Scope Process
+python manage.py runserver
+
 Para resolver esse problema, você precisa alterar temporariamente a política de execução do PowerShell para permitir a execução de scripts. Você pode fazer isso abrindo o PowerShell como administrador e executando o seguinte comando:
 
 plaintext
